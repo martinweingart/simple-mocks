@@ -11,13 +11,7 @@ The tool uses [Chance.js](http://chancejs.com/) to generate the random data.
 ## Installation
 
 ```
-npm install --global simple-mocks
-```
-
-Or just call it with npx:
-
-```
-npx simple-mocks
+npm i --global @martinweingart/simple-mocks
 ```
 
 ## Usage
