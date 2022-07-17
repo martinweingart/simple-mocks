@@ -1,0 +1,74 @@
+{
+  "templates": {
+    "Person": {
+      "name": {
+        "type": "value",
+        "chance": {
+          "name": "name"
+        }
+      },
+      "age": {
+        "type": "value",
+        "chance": {
+          "name": "age"
+        }
+      }
+    },
+
+    "Vehicle": {
+      "type": {
+        "type": "value",
+        "chance": {
+          "name": "pickone",
+          "args": [["car", "bike", "bus"]]
+        }
+      }
+    },
+
+    "User": {
+      "name": {
+        "type": "value",
+        "chance": {
+          "name": "name"
+        }
+      },
+      "email": {
+        "type": "value",
+        "chance": {
+          "name": "email"
+        }
+      },
+      "vehicle": {
+        "type": "object",
+        "template": "Vehicle"
+      },
+
+      "friends": {
+        "type": "array",
+        "template": "Person",
+        "min": 0,
+        "max": 10
+      }
+    },
+
+    "Place": {
+      "city": {
+        "type": "value",
+        "chance": {
+          "name": "city"
+        }
+      },
+      "address": {
+        "type": "value",
+        "chance": {
+          "name": "address"
+        }
+      }
+    }
+  },
+
+  "collections": [
+    { "name": "users", "template": "User", "min": 10, "max": 20 },
+    { "name": "places", "template": "Place", "min": 5, "max": 10 }
+  ]
+}
